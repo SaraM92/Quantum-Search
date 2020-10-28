@@ -46,7 +46,7 @@ def Wavefunction( obj , *args, **kwargs):
 		#print(wavefunction)
 		value = round(statevec[i].real, dec) + round(statevec[i].imag, dec) * 1j
 		if( (value.real != 0) or (value.imag != 0)):
-			state = list(Binary(int(i),int(2**qubits)))
+			state = list(format(int(i),f"0{int(2**qubits)}b"))
 			state.reverse()
 			state_str = ''
 			#print(state)
